@@ -1,0 +1,47 @@
+/*==========================animation=============================*/
+
+@keyframes fade {
+    0% {
+      opacity: 0;
+    }
+    50% {
+      opacity: 0.7;
+      transform: rotate3d(80deg);
+    }
+    100% {
+      opacity: 1;
+      transform: rotate3d(360deg);
+    }
+  }
+  
+  @keyframes late {
+    0% {
+      opacity: 0;
+    }
+    25% {
+      opacity: 0;
+    }
+    50% {
+      opacity: 0;
+    }
+    60% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  
+  [data-anime] {
+    opacity: 0;
+    transition: .3s;
+  }
+
+  [data-anime="left"]{
+    transform: translate3d(-50px, 0, 0);
+  }
+
+  [data-anime].animate {
+    opacity: 1;
+    transform: translate3d(0px, 0px, 0px);
+  }
